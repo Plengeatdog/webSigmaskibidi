@@ -1,182 +1,39 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
-    <style>
-        form {
-            width: 1000px;
-            border: 1 px solid #b89d9d;
-            border-radius: 6px;
-            font-family: Arial,sans-serif;
-        }
-        .form-header{
-            background-color: aqua;
-            color: aliceblue;
-            padding: 20px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 6px 6px 6px 6px;
-
-        }
-        .form-row{
-            display: flex;
-            gap: 15px;
-
-        }
-        .form-group{
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-
-        }
-        .form-row .form-group input {
-            max-width: 600px;
-        }
-
-        .form-group input[type="email"] {
-            max-width: 300px;
-        }
-        .form-group input[type="password"]{
-            max-width: 300px;
-        }
-        .form-group input[type="date"]{
-            max-width: 300px;
-        }
-    </style>
+    <title>Poompat Note</title>
 </head>
 <body>
-    <form action="/register" method="post">
-        <div  style="color: black;" class="form-header">
-            สมัครสมาชิก
-        </div>
-        <fieldset>
-            <p>กรอกเนื้อหาด้านล่าง</p>
+    <nav>
+        <a href="index.html">หน้าแรก</a> |
+        <a href="aboutme.html" target="_blank">เกี่ยวกับฉัน</a> |
+        <a href="contact.html">ติดต่อ</a>
+        <a href="https://akkar-680710823.w3spaces.com/aboutme.html"target ="_blank">อัครินท์ เว็ปไซต์</a>
+        <a href="https://naphat-680710184.w3spaces.com/about-me.html"target ="_blank"> ณภัทร  เว็ปไซต์</a>
+        <a href="https://suthi-680710821.w3spaces.com/aboutme.html"target ="_blank"> สุฑิพัศ เว็ปไซต์</a>
+        <a href="https://thasp-680710800.w3spaces.com/"target ="_blank"> ธรรศพิสิฐ เว็ปไซต์</a>
+         
 
-    <!-- แถวชื่อ + นามสกุล -->
-    <div class="form-row">
-
-        <div class="form-group">
-            <label for="firstname">ชื่อ</label>
-            <input type="text"
-                   id="firstname"
-                   name="firstname"
-                   required>
-        </div>
-
-        <div class="form-group">
-            <label for="lastname">นามสกุล</label>
-            <input type="text"
-                   id="lastname"
-                   name="lastname"
-                   required>
-        </div>
-
-    </div>
-        <div class="form-group">
-            <label for="email">อีเมล</label>
-            <input type="email"
-                   id="email"
-                   name="email"
-                   placeholder="example@email.com"
-                   required>
-        </div>
-            <div class="form-group">
-            <label for="password">รหัสผ่าน</label>
-            <input type="password"
-                   id="password"
-                   name="password"
-                   minlength="8"
-                   pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"
-                   title="ต้องมีตัวอักษรและตัวเลข อย่างน้อย 8 ตัว"
-                   required>
-            </div>
-            <div class="form-group">
-            <label for="birthdate">วันเกิด</label>
-            <input type="date"
-                   id="birthdate"
-                   name="birthdate"
-                   max="2010-01-01">
-            </div>
-        </fieldset>
-    </form>
-    <form action="/resister" method="post">
-        <div class="form-header">
-            <a style="color: black;">ทักษะที่มี</a>
-        </div>
-        <fieldset>
-            <label for="skills">(เลือกได้หลายรายการ)</label>
-   
-        <div >
-            <label>
-                <input type="checkbox" name="agree" required>
-                html
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" name="agree" required>
-                css
-            </label>
-        </div>
-        <div >
-            <label>
-                <input type="checkbox" name="agree" required>
-                java
-            </label>    
-        </div>
-        <div >
-            <label>
-                <input type="checkbox" name="agree" required>
-                เขียนโปรแกรม
-            </label>    
-        </div>
         
-        </fieldset>
-
-    </form>
-    <form action="/resister" method="post">
-        <div class="form-header">
-            <a style="color: black;">แนะนำตัว</a>
-        </div>
-        <fieldset>
-            <div class="form-row">
-
-                <div class="form-group">
-                    <label for="firstname">ชื่อ</label>
-                    <input type="text"
-                        id="firstname"
-                        name="firstname"
-                        required>
-                </div>
-
-                <div class="form-group">
-                    <label for="lastname">นามสกุล</label>
-                    <input type="text"
-                        id="lastname"
-                        name="lastname"
-                        required>
-                </div>
-
-            </div>
-            <a>เบอร์ติดต่อ</a>
-            <input type="tel"
-            name="phone"
-            pattern="0[0-9]{2}-[0-9]{3}-[0-9]{4}"
-            placeholder="0xx-xxx-xxxx"
-            title="กรุณากรอกในรูปแบบ 0xx-xxx-xxxx">
-            <br>
-            <label>แนะนำตัว</label><br>
-            <textarea name="about" rows="5" placeholder="พิมพ์แนะนำตัวที่นี่"></textarea>
-            <br><br>
-
-            <label>อัพโหลด Resume</label><br>
-                <input type="file" accept=".pdf">
-
-        </fieldset>
-    </form>
-
+    </nav>
+    <h1>Welcome to My Website</h1>
+    <p>This is my first webpage!</p>
     
+    <h2>About Me</h2>
+    <p>I am learning HTML.</p>
+    
+    <h2>My Favorite Fruits</h2>
+    <ul>
+        <li>Mango</li>
+        <li>Orange</li>
+        <li>ple</li>
+    </ul>
+    
+    <h2>Useful Links</h2>
+    <a href="Basic.html" target="_blank">page2</a>
+    
+    <br><br>
+    <button>Click Me!</button>
 </body>
 </html>
