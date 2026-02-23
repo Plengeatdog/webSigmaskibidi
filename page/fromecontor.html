@@ -45,10 +45,61 @@
             I agree to the terms
         </label>
     </div>
+    <div class="input-group mb-3">
+    <span class="input-group-text">@</span>
+    <input type="text" class="form-control" placeholder="Username">
+</div>
+
+<!-- Multiple Inputs -->
+<div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input type="text" class="form-control" placeholder="Amount">
+    <span class="input-group-text">.00</span>
+</div>
+
+<!-- Button Addon -->
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search...">
+    <button class="btn btn-primary" type="button">Go</button>
+</div>
+
+<!-- With Icon -->
+<div class="input-group mb-3">
+    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+    <input type="email" class="form-control" placeholder="Email">
+</div>
+
     
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </nav>
+<!-- Basic Alerts -->
+<div class="alert alert-success" role="alert">
+    <strong>Success!</strong> Your action was completed.
+</div>
+
+<div class="alert alert-danger" role="alert">
+    <strong>Error!</strong> Something went wrong.
+</div>
+
+<div class="alert alert-warning" role="alert">
+    <strong>Warning!</strong> Please check your input.
+</div>
+
+<div class="alert alert-info" role="alert">
+    <i class="bi bi-info-circle"></i> This is an info message.
+</div>
+
+<!-- Dismissible Alert -->
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Warning!</strong> This can be dismissed.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+
+<!-- Alert with Link -->
+<div class="alert alert-primary" role="alert">
+    Check out this <a href="#" class="alert-link">important link</a>.
+</div>
     
 </body>
 </html>
